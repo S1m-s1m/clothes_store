@@ -1,0 +1,28 @@
+{% extends 'main/main_page.html' %}
+
+{% load static %}
+
+{% block title %}Отзывы{% endblock title %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock link %}
+
+{% block content %}
+
+<div id="scroll_field_form">
+<table id='review_table' border="1" align="center" bgcolor="white" cellpadding="10" cellspacing="30" bordercolor="black">
+        <caption><strong><h1>Отправка отзыва</h1></strong></caption>
+        <tr><td><form method="post" action="">
+        {% csrf_token %}
+            <p>{{ form.name }}</p>
+            <p>{{ form.email }}</p>
+            <p>{{ form.text }}</p>
+            <span>{{ error }}</span>
+            <p><button type="reset">Сбросить</button></p>
+            <p><input type="submit" value="отправить"></p>
+    </form></td></tr>
+    </table>
+</div>
+
+{% endblock content %}

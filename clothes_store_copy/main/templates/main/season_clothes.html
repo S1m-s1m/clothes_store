@@ -1,0 +1,26 @@
+{% extends 'main/main_page.html' %}
+{% load static %}
+{% block title %}Одежда на сезон{% endblock title %}
+
+{% block content %}
+        <div id="scroll">
+            <table id='clothes_table' border="1" align="center" bgcolor="white" cellspacing="50" width="100%" bordercolor="black">
+                <div id="seasons" align="center">
+                    <a href="{% url 'season_clothes' 'winter' %}"><button class="season_button">Зима</button></a>
+                    <a href="{% url 'season_clothes' 'spring' %}"><button class="season_button">Весна</button></a>
+                    <a href="{% url 'season_clothes' 'summer' %}"><button class="season_button">Лето</button></a>
+                    <a href="{% url 'season_clothes' 'autumn' %}"><button class="season_button">Осень</button></a>
+                </div>
+                <caption><strong><h1>Сезонные вещи</h1></strong></caption>
+                {% for cloth in season_clothes %}
+                    <tr><td><hr align="center" color="black"></td></tr>
+                    <tr id="string"><td id="cell">
+                    <p><img src="{{ cloth.image.url }}" height="350px" align="left"></p>
+                    <div id="cloth_name">{{ cloth.name }}</div>
+                    <div id="cloth_cost">{{ cloth.cost }}</div>
+                    <a href="{{ cloth.get_absolute_url }}"><button id="cloth_button">Подробнее</button></a>
+                    </td></tr>
+                {% endfor %}
+            </table>
+        </div>
+{% endblock content %}

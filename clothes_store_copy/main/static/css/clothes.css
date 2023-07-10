@@ -1,0 +1,49 @@
+#scroll {
+    height: 470px;
+    width: 703px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 24px;
+    left: 250px;
+}
+
+#clothes_table {
+    width: 686px;
+    height: 300px;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-color: transparent;
+}
+
+#cell {
+    display: table-cell;
+    height: 100px;
+}
+
+#string {
+    white-space: nowrap;
+    font-size: 30px;
+}
+
+#cloth_name::before {
+    content: 'Название: '
+}
+
+#cloth_cost::before {
+    content: 'Цена: ';
+}
+
+#cloth_cost::after {
+    content: ' сум';
+}
+
+.season_button {
+    background-color: #8B7AA8;
+    color: white;
+}
+
+
+
+
+

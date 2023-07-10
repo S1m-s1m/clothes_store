@@ -1,0 +1,43 @@
+{% extends 'main/main_page.html' %}
+
+{% load static %}
+
+{% block title %}Подробнее{% endblock title %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/clothes_detail.css' %}">
+{% endblock link %}
+
+{% block content %}
+
+<div id="scroll_field_cloth">
+<table id="table_detail" border="1" align="center" valign="middle" bgcolor="white" cellpadding="10" cellspacing="30" bordercolor="black">
+    <tr id="string"><td id="cell">
+        <p><img src="{{ cloth_url.image.url }}" height="350px" align="left"></p>
+        <strong>
+            <p id='detail_name' align="center">{{ cloth_url.name }}</p>
+            <div id="scroll_field" align="right">
+            <p id='detail_contacts' align="right">{{ cloth_url.contacts }}</p>
+            </div>
+            <p id="detail_cost" align="center">{{ cloth_url.cost }}</p>
+            {% for season in cloth_url.sex.all %}
+            <p id='detail_sex' align="center">{{ cloth_url.sex }}</p>
+            {% endfor %}
+            {% for season in cloth_url.seasons.all %}
+                <p id='detail_season' align="center">{{ season.name }}</p>
+            {% endfor %}
+            {% for size in cloth_url.size.all %}
+                <p id='detail_size' align="center">{{ size.name }}</p>
+            {% endfor %}
+            {% for availability in cloth_url.availability.all %}
+                <p id='detail_av' align="center">{{ availability.name }}</p>
+            {% endfor %}
+        </strong>
+        <a href="{% url 'contacts' %}"><button>Admin</button></a>
+    </td>
+    </tr>
+</table>
+</div>
+
+{% endblock content %}
+

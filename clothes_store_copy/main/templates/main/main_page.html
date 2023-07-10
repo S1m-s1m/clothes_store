@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000px">
+    <title>{% block title %}Главная страница{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/clothes.css' %}">
+    {% block link %}
+    {% endblock link %}
+
+</head>
+<body>
+    <div id="first">
+    <div id="menu"><strong class="menu">Меню</strong></div>
+    <ul type="circle">
+        <a href="{% url 'main' %}"><li><button>Главная</button></li></a>
+        <a href="{% url 'clothes' %}"><li><button>Магазин</button></li></a>
+        <a href="{% url 'add_review' %}"><li><button>Отзывы</button></li></a>
+        <a href="{% url 'contacts' %}"><li><button>Контакты</button></li></a>
+        <a href="{% url 'add_cloth' %}"><li><button id="add_button">Добавить товар</button></li></a>
+    </ul></div>
+    {% block content %}
+
+    <div id="scroll_main">
+    <table id='main_table' border="1" align="center" bgcolor="white" cellpadding="10" cellspacing="30" bordercolor="black">
+        <caption><strong><h2>
+        {% if name %}
+            <p>Добро пожаловать {{ users.last.name }}!</p>
+            <p>НОВИНКА!</p>
+        {% else %}
+            <p>Зарегистрируйтесь на сайте</p>
+        {% endif %}
+        </h2></strong></caption>
+
+        <tr><td>
+        {% if not name %}
+        <form method="post" action="">
+        {% csrf_token %}
+        {{ form.name }}
+        <p><input placeholder="Номер телефона"></p>
+        <p><input type="email" placeholder="Эл.почта"></p>
+        <p>Пол:
+        <label><input type="radio">М</label>
+        <label><input type="radio">Ж</label></p>
+        <p><label><input type="checkbox">Согласен на обработку персональных данных</label></p>
+        <p><label><input type="checkbox">Согласен на рассылку писем</label></p>
+        <p><input type="reset"></p>
+        <p><input type="submit" value="Зарегистрироваться"></p>
+        </form>
+        {% endif %}
+
+        {% if name %}
+            <p><img src="{{ new.image.url }}" height="264px" align="left"></p>
+            <h2><div id="cloth_name">{{ new.name }}</div></h2>
+            <h2><div id="cloth_cost">{{ new.cost }}</div></h2>
+            <a href="{{ new.get_absolute_url }}"><button id="cloth_button">Подробнее</button></a>
+        {% endif %}
+
+        </td></tr>
+    </table>
+    </div>
+{% endblock content %}
+
+<div id="rev_name" align="center"><p><h2>Отзывы о сайте</h2></p></div>
+        {% for review in reviews %}
+        <div id="reviews" align="center">
+            <h2><p id="nick_name"><sup>Имя: {{ review.name }}</sup></p>
+                <div id="review"><p>Отзыв: {{ review.text }}</p></div></h2>
+        </div>
+        {% endfor %}
+</body>
+</html>

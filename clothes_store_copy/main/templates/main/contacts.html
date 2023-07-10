@@ -1,0 +1,24 @@
+{% extends 'main/main_page.html' %}
+
+{% load static %}
+
+{% block title %}Контакты{% endblock title %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/clothes_detail.css' %}">
+{% endblock link %}
+
+{% block content %}
+    <div align="center">
+    <table id='table_contacts' border="1" align="center" bgcolor="white" cellpadding="10" cellspacing="30" bordercolor="black">
+        <tr><td>
+            <h1>
+            <p>Для заказа обращайтесь</p>
+            <p>Телефон для связи: +99898625420</p>
+            <p>Telegram: @Pigalica_Ray</p>
+                <p><s>Это текст заглушка, не воспринимай всерьез</s></p>
+            </h1>
+        </td></tr>
+    </table>
+    </div>
+{% endblock content %}

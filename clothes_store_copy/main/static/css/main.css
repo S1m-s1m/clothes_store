@@ -1,0 +1,139 @@
+#first {
+    background-color: #8A2BE2;
+    color: black;
+    background-image: url('../page_picture/photo_2023-06-30_16-05-44.jpg');
+    background-repeat: no-repeat;
+    background-position: 242px 15px;
+    height: 500px;
+    width: 945px;
+    background-size: 705px;
+    background-attachment: absolute;
+    left: 150px;
+    top: 190px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+body {
+    background-color: #8B7AA8;
+}
+
+.menu {
+    font-size: 40px;
+    position: relative;
+    left: 45px;
+    top: 20px;
+}
+
+#scroll_main {
+    height: 470px;
+    width: 703px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 24px;
+    left: 250px;
+}
+
+#main_table {
+    width: 686px;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+}
+
+#review_table {
+    width: 686px;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+form {
+    position: relative;
+    background-color: transparent;
+    font-size: 22px;
+}
+
+#cloth_button {
+    background-color: transparent;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+
+#add_button {
+    height: 70px;
+}
+
+button {
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 26px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.season_button {
+    background-color: #8B7AA8;
+    color: white;
+}
+
+#reviews {
+    width: 945px;
+    background-color: #9B30FF;
+    position: relative;
+    left: 0px;
+    top: 90px;
+    border-radius: 10px;
+}
+
+#rev_name {
+    width: 945px;
+    background-color: #B38DF9;
+    position: absolute;
+    left: 8px;
+    top: 530px;
+    border-radius: 10px;
+}
+
+#nick_name {
+    color: green;
+}
+
+#scroll_field_form {
+    height: 470px;
+    width: 703px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 24px;
+    left: 250px;
+}
+
+.form-control {
+    font-size: 25px;
+}
+
+#review {
+    word-break: break-all;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+#first {
+    background-color: #40826D;
+    color: black;
+    background-image: url('../page_picture/photo_2023-06-30_16-05-44.jpg');
+    background-repeat: no-repeat;
+    background-position: 242px 16px;
+    height: 500px;
+    width: 945px;
+    background-size: 705px;
+    background-attachment: absolute;
+    left: 150px;
+    top: 190px;
+    font-size: 20px;
+}
+
+body {
+    background-color: #7AA899;
+}
+
+.menu {
+    font-size: 40px;
+    position: relative;
+    left: 45px;
+    top: 20px;
+}
+
+#table_detail{
+    width: 686px;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+}
+
+button {
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 26px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+#detail_name::before {
+    content: 'Название: '
+}
+
+#detail_cost::before {
+    content: 'Цена: ';
+}
+
+#detail_sex::before {
+    content: 'Пол: ';
+}
+
+#detail_season::before {
+    content: 'Сезон: ';
+}
+
+#detail_size::before {
+    content: 'Размер: ';
+}
+
+#detail_av::before {
+    content: 'Состояние: ';
+}
+
+#detail_contacts::before {
+    content: 'Контакты продавца: ';
+}
+
+#cell {
+    font-size: 24px;
+    vertical-align: top;
+}
+
+#scroll_field {
+    position: relative;
+    left: 20px;
+    max-width: 50%;
+    overflow-x: scroll;
+}
+
+#scroll_field_cloth {
+    height: 470px;
+    width: 703px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 24px;
+    left: 250px;
+}
+
+#table_contacts {
+    width: 703px;
+    height: 470px;
+    position: absolute;
+    top: 24px;
+    left: 250px;
+    background-color: transparent;
+}
+
+
+
+

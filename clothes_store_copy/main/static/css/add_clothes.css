@@ -1,0 +1,17 @@
+#clothes_table_form {
+    width: 686px;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+}
+
+#scroll_table_form {
+    height: 470px;
+    width: 703px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 24px;
+    left: 250px;
+}
